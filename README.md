@@ -112,13 +112,14 @@ Add predictive modeling
 
 The project is deployed using Streamlit Community Cloud.
 
-https://your-app-name.streamlit.app
+https://phonepe-transaction-insights-4pbjv5fg7fywc9iatuefan.streamlit.app/
 
 ## 📦 Requirements
-streamlit
-pandas
-plotly
-numpy
+
+- streamlit
+- pandas
+- plotly
+- numpy
 
 ## 🧠 Learnings
 
@@ -139,5 +140,3 @@ Add real-time data updates
 Enhance UI/UX
 
 Integrate advanced analytics
-
-
