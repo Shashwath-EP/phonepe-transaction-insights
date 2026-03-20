@@ -131,7 +131,7 @@ with tab2:
 
     map_data = filtered_txn.groupby("state")["amount"].sum().reset_index()
 
-    # Normalize dataset state names
+    # ---------------- CLEAN DATASET STATES ---------------- #
     map_data["state"] = (
         map_data["state"]
         .str.replace("-", " ")
@@ -140,7 +140,13 @@ with tab2:
         .str.lower()
     )
 
-    # Normalize GeoJSON names
+    # FIXES missing states (LOWERCASE VERSION)
+    map_data["state"] = map_data["state"].replace({
+        "uttarakhand": "uttaranchal",
+        "odisha": "orissa"
+    })
+
+    # ---------------- CLEAN GEOJSON STATES ---------------- #
     for feature in geo["features"]:
         feature["properties"]["NAME_1"] = (
             feature["properties"]["NAME_1"]
@@ -149,6 +155,7 @@ with tab2:
             .lower()
         )
 
+    # ---------------- PLOT ---------------- #
     fig_map = px.choropleth(
         map_data,
         geojson=geo,
