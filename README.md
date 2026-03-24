@@ -112,7 +112,7 @@ Add predictive modeling
 
 The project is deployed using Streamlit Community Cloud.
 
-https://phonepe-transaction-insights-4pbjv5fg7fywc9iatuefan.streamlit.app/
+https://phonepe-transaction-insights-wnyxutj3rxp9wxr9vvqee2.streamlit.app/
 
 ## 📦 Requirements
 
